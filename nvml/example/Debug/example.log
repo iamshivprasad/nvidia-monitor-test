@@ -1,0 +1,15 @@
+﻿D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(39,5): warning MSB4211: The property "IntermediateOutputPath" is being set to a value for the first time, but it was already consumed at "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets(30,5): warning MSB4211: The property "DebugType" is being set to a value for the first time, but it was already consumed at "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets (29,5)".
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(373,5): warning MSB4211: The property "CleanFile" is being set to a value for the first time, but it was already consumed at "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
+  example.c
+example.obj : error LNK2019: unresolved external symbol _nvmlInit_v2 referenced in function _main
+example.obj : error LNK2019: unresolved external symbol _nvmlShutdown referenced in function _main
+example.obj : error LNK2019: unresolved external symbol _nvmlErrorString referenced in function _main
+example.obj : error LNK2019: unresolved external symbol _nvmlDeviceGetCount_v2 referenced in function _main
+example.obj : error LNK2019: unresolved external symbol _nvmlDeviceGetHandleByIndex_v2 referenced in function _main
+example.obj : error LNK2019: unresolved external symbol _nvmlDeviceGetName referenced in function _main
+example.obj : error LNK2019: unresolved external symbol _nvmlDeviceGetPciInfo_v2 referenced in function _main
+example.obj : error LNK2019: unresolved external symbol _nvmlDeviceGetComputeMode referenced in function _main
+example.obj : error LNK2019: unresolved external symbol _nvmlDeviceSetComputeMode referenced in function _main
+C:\Users\shiva\Downloads\Compressed\gdk_332.85_release\gdk_wddm_amd64_release\nvml\lib\nvml.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Users\shiva\Downloads\Compressed\gdk_332.85_release\gdk_wddm_amd64_release\nvml\example\Debug\example.exe : fatal error LNK1120: 9 unresolved externals
