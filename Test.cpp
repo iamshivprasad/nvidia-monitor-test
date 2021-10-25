@@ -13,20 +13,22 @@ int main()
 	NvmlWrapper wrapper;
 	NVMLDeviceManager manager(wrapper);
 	
-	//while (true)
-	//{
+	while (true)
+	{
 		for (auto itr = manager.devicesBegin(); itr != manager.devicesEnd(); ++itr)
 		{
 			auto m = itr->refreshMetrics();
 
 			std::cout << "Temperature : " << m.temperature << " degree C"
-					  << " Fan speed: " << m.fanSpeed << "%" 
-					  << " Gpu usage: " << m.gpuUtilization 
-					  << " memeory usage: " << m.memoryUtilization 
-					  << " power usage: " << m.powerUsage << std::endl;
+				<< " Fan speed: " << m.fanSpeed << "%"
+				<< " Gpu usage: " << m.gpuUtilization << "%"
+				<< " memeory usage: " << m.memoryUtilization
+				<< " power usage: " << m.powerUsage
+				<< " gpu clock: " << m.gpuClock << "MHz"
+				<< " mem clock: " << m.memClock << "MHz" << std::endl;
 			std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 		}
-	//}
+	}
 
 
 	return 0;

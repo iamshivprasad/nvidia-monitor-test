@@ -8,6 +8,8 @@ struct Metrics
     unsigned int powerUsage;
     unsigned int gpuUtilization;
     unsigned int memoryUtilization;
+    unsigned int gpuClock;
+    unsigned int memClock;
 };
 
 class NVMLDevice
@@ -22,6 +24,8 @@ private:
     const nvmlDevice_t m_handle;
     const NvmlWrapper& m_wrapper;
 
+    unsigned int m_gpuClock;
+    unsigned int m_memClock;
     unsigned int m_fanSpeed;
     unsigned int m_temperature;
     unsigned int m_powerUsage;

@@ -19,8 +19,15 @@ Metrics NVMLDevice::refreshMetrics()
 	m_powerUsage = m_wrapper.getDevicePowerUsage(m_index, m_handle);
 	m_temperature = m_wrapper.getDeviceTemperature(m_index, m_handle);
 
+	auto driverName = m_wrapper.getDeviceName(m_index, m_handle);
+
+	m_gpuClock = m_wrapper.getClockInfo(nvmlClockType_t::NVML_CLOCK_GRAPHICS, m_handle);
+
+	m_memClock = m_wrapper.getClockInfo(nvmlClockType_t::NVML_CLOCK_MEM, m_handle);
+
+
 	return Metrics
 	{
-		m_fanSpeed, m_temperature, m_powerUsage, m_gpuUtilization, m_memoryUtilization
+		m_fanSpeed, m_temperature, m_powerUsage, m_gpuUtilization, m_memoryUtilization, m_gpuClock, m_memClock
 	};
 }
